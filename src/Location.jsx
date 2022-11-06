@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ResidentInfo from './ResidentInfo';
 
-const Location = ({headercell}) => {
+const Location = ({ headercell }) => {
 
     //Estado para Consumir API
     const [rickLocation, setRickLocation] = useState({});
@@ -32,8 +32,7 @@ const Location = ({headercell}) => {
 
     }
 
-    console.log(rickLocation)
-    //Funcion para el boton Search
+    // console.log(rickLocation)
 
     // console.log(rickLocation); //Imprimir API para ver su contenido
 
@@ -41,9 +40,8 @@ const Location = ({headercell}) => {
 
         <div>
             <div className="header">
-              {/* ./src/assets/video/mp4/rick-morty-react.mp4 */}
                 <div className="video-header">
-                    <video src="https://drive.google.com/uc?export=download&id=116TnmgSqLjv5ocLTgurcDp4scmRG2Uxm" autoplay="true" muted loop poster="https://www.xtrafondos.com/wallpapers/familia-sanchez-rick-y-morty-9231.jpg" className='video-intro'></video>
+                    <video src="https://drive.google.com/uc?export=download&id=116TnmgSqLjv5ocLTgurcDp4scmRG2Uxm" autoPlay muted loop poster="https://www.xtrafondos.com/wallpapers/familia-sanchez-rick-y-morty-9231.jpg" className='video-intro'></video>
                     <div className="container-intro-video">
 
                         {/* Para Desktop */}

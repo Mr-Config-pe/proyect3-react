@@ -38,9 +38,14 @@ body{
 input{
   width: 15em;
   height: 2.5em;
-  border-top: 5px solid rgba(4, 108, 255);
-  border-left: 5px solid rgba(4, 108, 255);
-  border-bottom: 5px solid rgba(4, 108, 255);
+  border: 5px solid rgb(92, 203, 243);
+  border-radius: 4px;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
 }
 
 .info-basic{
@@ -57,7 +62,7 @@ input{
   height: 6em;
   border-radius: 50%;
   right: 10px;
-  border: 5px solid rgba(4, 108, 255)
+  border: 5px solid rgba(92, 203, 243)
 }
 
 .header>.info-basic>h2{
@@ -320,6 +325,7 @@ input{
   box-sizing: border-box;
   background-color: transparent;
   font-size: 20px;
+  color: white;
 }
 
 .container-input2{
@@ -332,6 +338,12 @@ input{
 .btn-search{
    border: 5px solid #aaa;
  }
+
+ .residents-card>h2{
+  padding-top: 0.5em;
+  color: white;
+ }
+
 
 }
 

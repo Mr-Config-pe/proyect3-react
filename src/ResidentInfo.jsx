@@ -45,13 +45,11 @@ const ResidentInfo = ({ url }) => {
                             randmItem.status === "Dead" && isDead ||
                             randmItem.status === "unknown" && isUnknown}</h4>
                     </div>
-                    <h4>{randmItem.name}</h4>
+                    <h2>{randmItem.name}</h2>
                     <hr></hr>
-                    <h4>Especie :
-                        {randmItem.species}</h4>
-                    <h4>Origen :
-                        {randmItem.origin?.name}</h4>
-                    <h4>Cantidad Episodio : {randmItem.episode?.length}</h4>
+                    <h4>Specie : {randmItem.species}</h4>
+                    <h4>Origin : {randmItem.origin?.name}</h4>
+                    <h4>Quantity Episode : {randmItem.episode?.length}</h4>
                 </div>
             </div>
         </div >
