@@ -120,6 +120,11 @@ input{
   border: 1px #555 dashed;
 }
 
+.residents-card>h2{
+  padding-top: 0.5em;
+  color: white;
+ }
+
 .residents-card::before{
   content: '';
   position: absolute;
@@ -339,10 +344,6 @@ input{
    border: 5px solid #aaa;
  }
 
- .residents-card>h2{
-  padding-top: 0.5em;
-  color: white;
- }
 
 
 }
