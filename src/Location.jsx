@@ -54,7 +54,7 @@ const Location = () => {
                             <h3 className='title-resident header-h3'>Total Resident : <b className='value-resident'>{rickLocation.residents?.length}</b></h3>
                         </div>
 
-                        <div className="container-input">
+                        <div className="container-input2">
                             <input placeholder='type a location id' type="text" value={searchId} onChange={e => setSearchId(e.target.value)} />
                             <button onClick={idSearch} className="btn-search">Search</button>
                         </div>
