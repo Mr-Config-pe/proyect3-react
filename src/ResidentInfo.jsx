@@ -18,9 +18,9 @@ const ResidentInfo = ({ url }) => {
     }, [])
 
 
-    const isAlive = <div className="isLive"><i className="fa-solid fa-heart"><b></b></i> Alive</div>
-    const isDead = <div className="isDead"><i className="fa-sharp fa-solid fa-skull-crossbones"></i> Dead</div>
-    const isUnknown = <div className="isUnknown"><i className="fa-solid fa-circle-question"></i> Unknown</div>
+    const isAlive = <div className="isLive"><i className="fa-solid fa-heart fa-beat"><b></b></i> Alive</div>
+    const isDead = <div className="isDead"><i className="fa-sharp fa-solid fa-skull-crossbones fa-fade"></i> Dead</div>
+    const isUnknown = <div className="isUnknown"><i className="fa-solid fa-circle-question fa-flip"></i> Unknown</div>
 
 
     // console.log(statusItem);

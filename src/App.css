@@ -7,31 +7,89 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: black;
   
 }
 
 .header{
-  background-color: rgb(5, 180, 255);
   text-align: center;
+}
+
+.container-header-img{
+  padding: 2em 0px;
+  text-align: center;
+}
+
+.container-input{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1em;
+}
+
+input{
+  width: 15em;
+  height: 2.5em;
+  border-top: 5px solid rgba(4, 108, 255);
+  border-left: 5px solid rgba(4, 108, 255);
+  border-bottom: 5px solid rgba(4, 108, 255);
+}
+
+.btn-search{
+ position: relative;
+  background: linear-gradient(
+    0deg,
+    #ffc15d,
+    #ff4e57
+  );
+  height: 6em;
+  border-radius: 50%;
+  right: 10px;
+  border: 5px solid rgba(4, 108, 255)
+}
+
+.header>h2{
+  color: #057f05;
 }
 
 .header>h3{
   text-align: start;
   padding-left: 1em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header-h3{
+  
+  color: #02b702;
+  
+}
+
+.value-resident{
+  color: #f19808;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.value-dimension{
+  color: #f19808;
+}
+
+.value-type{
+  color: #f19808;
 }
 
 .container-item{
   
   padding: 0;
-  background-color: #fc7202;
   text-align: center;
 
 }
 
 
 .residents-card{
-  margin: 3em 1em 1em 1em;
-  max-width: 100%;
+  margin: 5em 1em 1em 1em;
+  max-width: 322px;
   background-color: rgba(177, 177, 177, 0.4);
   color: rgb(9, 9, 9);
   padding: 2em;
@@ -51,8 +109,11 @@ body{
   transform: translateX(-50%);
   background: linear-gradient(
     0deg,
+    #ffc15d,
+    #ff4e57
+    /* 0deg,
     #e45bf9,
-    #02bafc
+    #02bafc */
   );
   width: 0;
   height: 0;

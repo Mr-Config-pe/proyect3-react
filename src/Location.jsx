@@ -38,14 +38,25 @@ const Location = () => {
     // console.log(rickLocation); //Imprimir API para ver su contenido
 
     return (
-        <div className='header'>
-            <h3>Location : {rickLocation.name}</h3>
-            <h3>Type : {rickLocation.type}</h3>
-            <h3>Dimension : {rickLocation.dimension}</h3>
-            <h3>Total Resident : {rickLocation.residents?.length}</h3>
 
-            <input placeholder='type a location id' type="text" value={searchId} onChange={e => setSearchId(e.target.value)} />
-            <button onClick={idSearch}>Search</button>
+        <div>
+            <div className="header">
+
+                <div className="container-header-img">
+                    <img src='./src/assets/images/rick-and-morty-react-bootcamp.avif' />
+                </div>
+                <div className="container-input">
+                    <input placeholder='type a location id' type="text" value={searchId} onChange={e => setSearchId(e.target.value)} />
+                    <button onClick={idSearch} className="btn-search">Search</button>
+                </div>
+
+                <h2>{rickLocation.name}</h2>
+                <hr />
+                <h3 className='title-type header-h3'>Type : <b className='value-type'>{rickLocation.type}</b></h3>
+                <h3 className='title-dimension header-h3'>Dimension : <b className='value-dimension'>{rickLocation.dimension}</b></h3>
+                <h3 className='title-resident header-h3'>Total Resident : <b className='value-resident'>{rickLocation.residents?.length}</b></h3>
+                <hr></hr>
+            </div>
 
             <div >
                 <ul className="container-item">
