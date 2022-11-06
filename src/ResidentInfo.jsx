@@ -49,7 +49,7 @@ const ResidentInfo = ({ url }) => {
                     <hr></hr>
                     <h4>Specie : {randmItem.species}</h4>
                     <h4>Origin : {randmItem.origin?.name}</h4>
-                    <h4>Quantity Episode : {randmItem.episode?.length}</h4>
+                    <h4>Episode Quantity : {randmItem.episode?.length}</h4>
                 </div>
             </div>
         </div >
