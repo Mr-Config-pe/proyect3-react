@@ -11,6 +11,10 @@ body{
   
 }
 
+.video-header{
+  display: none;
+}
+
 .header{
   text-align: center;
 }
@@ -37,6 +41,10 @@ input{
   border-bottom: 5px solid rgba(4, 108, 255);
 }
 
+.info-basic{
+  text-align: start;
+}
+
 .btn-search{
  position: relative;
   background: linear-gradient(
@@ -50,11 +58,12 @@ input{
   border: 5px solid rgba(4, 108, 255)
 }
 
-.header>h2{
-  color: #057f05;
+.header>.info-basic>h2{
+  color: #4187e2;
+  padding-left: 1em;
 }
 
-.header>h3{
+.header>.info-basic>h3{
   text-align: start;
   padding-left: 1em;
   font-family: 'Raleway', sans-serif;
@@ -84,6 +93,10 @@ input{
   padding: 0;
   text-align: center;
 
+}
+
+.container-card{
+  width: 338px;
 }
 
 
@@ -204,3 +217,47 @@ input{
   }
 }
 
+@media (min-width: 500px){
+
+ 
+
+  /* .video-header{
+    
+    
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+  } */
+
+.container-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-card{
+  width: 338px;
+}
+
+.container-header-img{
+  display: none;
+}
+
+/* .container-input{
+  position: absolute;
+} */
+
+.header>.info-basic>h2{
+  text-align: center;
+}
+
+.header>.info-basic>h3{
+  text-align: center;
+}
+
+
+
+}

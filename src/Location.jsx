@@ -42,23 +42,30 @@ const Location = () => {
         <div>
             <div className="header">
 
+                {/* <div className="video-header">
+                <video src="./src/assets/video/mp4/rick-morty-react.mp4" autoplay="true" muted="false" loop="true" poster="https://carontestudio.com/img/contacto.jpg" className='video-intro'></video>
+                </div> */}
                 <div className="container-header-img">
                     <img src='./src/assets/images/rick-and-morty-react-bootcamp.avif' />
                 </div>
+
                 <div className="container-input">
                     <input placeholder='type a location id' type="text" value={searchId} onChange={e => setSearchId(e.target.value)} />
                     <button onClick={idSearch} className="btn-search">Search</button>
                 </div>
 
-                <h2>{rickLocation.name}</h2>
-                <hr />
-                <h3 className='title-type header-h3'>Type : <b className='value-type'>{rickLocation.type}</b></h3>
-                <h3 className='title-dimension header-h3'>Dimension : <b className='value-dimension'>{rickLocation.dimension}</b></h3>
-                <h3 className='title-resident header-h3'>Total Resident : <b className='value-resident'>{rickLocation.residents?.length}</b></h3>
-                <hr></hr>
+                <div className="info-basic">
+                    <h2>{rickLocation.name}</h2>
+                    <hr />
+                    <h3 className='title-type header-h3'>Type : <b className='value-type'>{rickLocation.type}</b></h3>
+                    <h3 className='title-dimension header-h3'>Dimension : <b className='value-dimension'>{rickLocation.dimension}</b></h3>
+                    <h3 className='title-resident header-h3'>Total Resident : <b className='value-resident'>{rickLocation.residents?.length}</b></h3>
+                    <hr></hr>
+                </div>
+
             </div>
 
-            <div >
+            <div className='section'>
                 <ul className="container-item">
                     {
                         rickLocation.residents?.map(resident => (
