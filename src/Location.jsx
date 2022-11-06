@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ResidentInfo from './ResidentInfo';
 
-const Location = () => {
+const Location = ({headercell}) => {
 
     //Estado para Consumir API
     const [rickLocation, setRickLocation] = useState({});
@@ -32,7 +32,7 @@ const Location = () => {
 
     }
 
-    // console.log(rickLocation)
+    console.log(rickLocation)
     //Funcion para el boton Search
 
     // console.log(rickLocation); //Imprimir API para ver su contenido
@@ -41,9 +41,9 @@ const Location = () => {
 
         <div>
             <div className="header">
-
+              {/* ./src/assets/video/mp4/rick-morty-react.mp4 */}
                 <div className="video-header">
-                    <video src="./src/assets/video/mp4/rick-morty-react.mp4" autoplay="true" muted="false" loop="true" poster="https://carontestudio.com/img/contacto.jpg" className='video-intro'></video>
+                    <video src="https://drive.google.com/uc?export=download&id=116TnmgSqLjv5ocLTgurcDp4scmRG2Uxm" autoplay="true" muted loop poster="https://www.xtrafondos.com/wallpapers/familia-sanchez-rick-y-morty-9231.jpg" className='video-intro'></video>
                     <div className="container-intro-video">
 
                         {/* Para Desktop */}
@@ -62,7 +62,7 @@ const Location = () => {
                 </div>
                 {/* Para Mobil */}
                 <div className="container-header-img">
-                    <img src='./src/assets/images/rick-and-morty-react-bootcamp.avif' />
+                    <img src={headercell} />
                 </div>
                 <div className="container-input">
                     <input placeholder='type a location id' type="text" value={searchId} onChange={e => setSearchId(e.target.value)} />

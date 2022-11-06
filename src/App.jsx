@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import Location from './Location'
-import Header from './Header'
+import './App.css';
+import Location from './Location';
+import headermobile from "./assets/images/rick-and-morty-react-bootcamp.avif";
 
 function App() {
 
   return (
     <div className="App">
       {/* <Header /> */}
-      <Location />
+      <Location headercell={headermobile}/>
     </div>
   )
 }
