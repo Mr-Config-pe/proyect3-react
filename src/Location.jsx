@@ -89,9 +89,9 @@ const Location = ({ headercell }) => {
                 <ul className="container-item">
                     {
                         currentPosts?.map(resident => (
-                            <ResidentInfo 
-                            key={resident} 
-                            url={resident} />
+                            <ResidentInfo
+                                key={resident}
+                                url={resident} />
                         ))}
                 </ul>
             </div>

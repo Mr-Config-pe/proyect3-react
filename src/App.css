@@ -98,7 +98,10 @@ input{
 .container-item{
   
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -230,12 +233,16 @@ input{
 
 /*Botones de Paginacion*/
 
-.pagination {
+.container-pagination {
+
+  /* width: 322px; */
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 1em 0px;
-  background-color: #101010;
+  background-color: rgb(0, 0, 0, 0.9);
+  gap: 1em;
 }
 
 .btn-pagination {
@@ -251,14 +258,20 @@ input{
   background: transparent;
   color: #eee;
   border-color: #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.btn-pagination.active {
-  font-weight: 900;
-  border-color: #101010;
-  background: #ffe400;
-  color: #101010;
-}
+/* .btn-pagination:active {
+  
+  background: linear-gradient(
+    0deg,
+    #ffc15d,
+    #ff4e57
+  );
+  
+} */
 
 
 @media (min-width: 550px){
