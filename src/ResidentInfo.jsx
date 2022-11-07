@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 
 
 
-const ResidentInfo = ({ url }) => {
+
+const ResidentInfo = ({ url}) => {
 
 
     const [randmItem, setRandMItem] = useState({});
@@ -17,13 +18,12 @@ const ResidentInfo = ({ url }) => {
 
     }, [])
 
-
     const isAlive = <div className="isLive"><i className="fa-solid fa-heart fa-beat"><b></b></i> Alive</div>
     const isDead = <div className="isDead"><i className="fa-sharp fa-solid fa-skull-crossbones fa-fade"></i> Dead</div>
     const isUnknown = <div className="isUnknown"><i className="fa-solid fa-circle-question fa-flip"></i> Unknown</div>
 
 
-    // console.log(statusItem);
+    // console.log(url);
 
     return (
         <div>
@@ -52,6 +52,7 @@ const ResidentInfo = ({ url }) => {
                     <h4>Episode Quantity : {randmItem.episode?.length}</h4>
                 </div>
             </div>
+            
         </div >
     );
 };

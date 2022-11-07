@@ -228,6 +228,37 @@ input{
   }
 }
 
+/*Botones de Paginacion*/
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em 0px;
+  background-color: #101010;
+}
+
+.btn-pagination {
+  width: 40px;
+  height: 40px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #eee;
+  border-color: #eee;
+}
+
+.btn-pagination.active {
+  font-weight: 900;
+  border-color: #101010;
+  background: #ffe400;
+  color: #101010;
+}
 
 
 @media (min-width: 550px){

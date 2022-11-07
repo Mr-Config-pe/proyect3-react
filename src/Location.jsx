@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ResidentInfo from './ResidentInfo';
+import Pagination from './Pagination';
 
 const Location = ({ headercell }) => {
 
@@ -32,9 +33,16 @@ const Location = ({ headercell }) => {
 
     }
 
-    // console.log(rickLocation)
-
     // console.log(rickLocation); //Imprimir API para ver su contenido
+
+    // Variables para Calcular 9 residentes por pagina
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const postsPerPage = 9;
+    const lastPostIndex = currentPage * postsPerPage;
+    const firstPostIndex = lastPostIndex - postsPerPage;
+    const currentPosts = rickLocation.residents?.slice(firstPostIndex, lastPostIndex);
+    console.log(currentPosts)
 
     return (
 
@@ -80,11 +88,18 @@ const Location = ({ headercell }) => {
             <div className='section'>
                 <ul className="container-item">
                     {
-                        rickLocation.residents?.map(resident => (
-                            <ResidentInfo key={resident} url={resident} />
+                        currentPosts?.map(resident => (
+                            <ResidentInfo 
+                            key={resident} 
+                            url={resident} />
                         ))}
                 </ul>
             </div>
+
+            <Pagination
+                totalPosts={rickLocation.residents?.length}
+                postsPerPage={postsPerPage}
+                setCurrentPage={setCurrentPage} />
 
         </div>
     );
