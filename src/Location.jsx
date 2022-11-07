@@ -21,7 +21,7 @@ const Location = ({ headercell }) => {
     }, []);
 
     const idSearch = () => {
-
+        setCurrentPage(1);
         if (searchId === "0") {
             alert("No es un id valido | Escoge uno del 1 al 126")
         } else if (searchId <= 126) {
@@ -42,7 +42,7 @@ const Location = ({ headercell }) => {
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = rickLocation.residents?.slice(firstPostIndex, lastPostIndex);
-    console.log(currentPosts)
+    
 
     return (
 
@@ -99,7 +99,8 @@ const Location = ({ headercell }) => {
             <Pagination
                 totalPosts={rickLocation.residents?.length}
                 postsPerPage={postsPerPage}
-                setCurrentPage={setCurrentPage} />
+                setCurrentPage={setCurrentPage} 
+                currentPage={currentPage}/>
 
         </div>
     );
