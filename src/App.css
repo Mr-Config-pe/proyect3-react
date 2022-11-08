@@ -3,6 +3,10 @@
   height: auto;
 }
 
+html{
+  cursor: url(./assets/images/cursor/cursor-crazy-48px.png), auto;
+}
+
 body{
 
   background-color: white;
