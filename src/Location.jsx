@@ -33,6 +33,11 @@ const Location = ({ headercell }) => {
 
     }
 
+    //URL de Video Header
+
+    const urlHeader = "https://drive.google.com/uc?export=download&id=116TnmgSqLjv5ocLTgurcDp4scmRG2Uxm";
+    const urlImgHeader = "https://www.xtrafondos.com/wallpapers/familia-sanchez-rick-y-morty-9231.jpg";
+
     // console.log(rickLocation); //Imprimir API para ver su contenido
 
     // Variables para Calcular 9 residentes por pagina
@@ -49,7 +54,7 @@ const Location = ({ headercell }) => {
         <div>
             <div className="header">
                 <div className="video-header">
-                    <video src="https://drive.google.com/uc?export=download&id=116TnmgSqLjv5ocLTgurcDp4scmRG2Uxm" autoPlay muted loop poster="https://www.xtrafondos.com/wallpapers/familia-sanchez-rick-y-morty-9231.jpg" className='video-intro'></video>
+                    <video src={urlHeader} autoPlay muted loop poster={urlImgHeader} className='video-intro'></video>
                     <div className="container-intro-video">
 
                         {/* Para Desktop */}
