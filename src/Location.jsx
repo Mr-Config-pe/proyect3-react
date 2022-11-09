@@ -3,7 +3,8 @@ import axios from 'axios';
 import ResidentInfo from './ResidentInfo';
 import Pagination from './Pagination';
 
-const Location = ({ headercell }) => {
+
+const Location = ({ headercell, mortySearch, portalSearch }) => {
 
     //Estado para Consumir API
     const [rickLocation, setRickLocation] = useState({});
@@ -38,6 +39,7 @@ const Location = ({ headercell }) => {
     const urlHeader = "https://drive.google.com/uc?export=download&id=116TnmgSqLjv5ocLTgurcDp4scmRG2Uxm";
     const urlImgHeader = "https://www.xtrafondos.com/wallpapers/familia-sanchez-rick-y-morty-9231.jpg";
 
+
     // console.log(rickLocation); //Imprimir API para ver su contenido
 
     // Variables para Calcular 9 residentes por pagina
@@ -47,7 +49,7 @@ const Location = ({ headercell }) => {
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = rickLocation.residents?.slice(firstPostIndex, lastPostIndex);
-    
+
 
     return (
 
@@ -66,8 +68,12 @@ const Location = ({ headercell }) => {
                         </div>
 
                         <div className="container-input2">
-                            <input placeholder='type a location id' type="text" value={searchId} onChange={e => setSearchId(e.target.value)} />
-                            <button onClick={idSearch} className="btn-search">Search</button>
+                            <input placeholder='type a portal id' type="text" value={searchId} onChange={e => setSearchId(e.target.value)} />
+                            <div className="container-btn-search">
+                                {/* <img src={portalSearch} className="portal-search"/> */}
+                                <button onClick={idSearch} className="btn-search">Search</button>
+                            </div>
+                            <img className="mortysearch" src={mortySearch} />
                         </div>
                     </div>
                 </div>
@@ -104,8 +110,8 @@ const Location = ({ headercell }) => {
             <Pagination
                 totalPosts={rickLocation.residents?.length}
                 postsPerPage={postsPerPage}
-                setCurrentPage={setCurrentPage} 
-                currentPage={currentPage}/>
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage} />
 
         </div>
     );
