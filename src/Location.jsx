@@ -71,9 +71,10 @@ const Location = ({ headercell, mortySearch, portalSearch }) => {
                             <input placeholder='type a portal id' type="text" value={searchId} onChange={e => setSearchId(e.target.value)} />
                             <div className="container-btn-search">
                                 {/* <img src={portalSearch} className="portal-search"/> */}
-                                <button onClick={idSearch} className="btn-search">Search</button>
+                                <b onClick={idSearch} className="btn-search" ><a>Search</a></b>
+                                <img className="mortysearch" src={mortySearch} />
+                                <i className="fa-solid fa-hurricane fa-spin" ></i>
                             </div>
-                            <img className="mortysearch" src={mortySearch} />
                         </div>
                     </div>
                 </div>
